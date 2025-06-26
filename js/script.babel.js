@@ -10,8 +10,8 @@ var cardsArray = [{
   'name': 'bobomb',
   'img': 'img/bobomb.png'
 }, {
-  'name': 'mario',
-  'img': 'img/mario.png'
+  'name': 'nina',
+  'img': 'img/nina.png'
 }, {
   'name': 'luigi',
   'img': 'img/luigi.png'
@@ -122,3 +122,47 @@ grid.addEventListener('click', function (event) {
     previousTarget = clicked;
   }
 });
+
+
+// Crear la barra de progreso
+var timerWrapper = document.createElement('div');
+timerWrapper.style.width = '100%';
+timerWrapper.style.height = '25px';
+timerWrapper.style.backgroundColor = '#ccc';
+timerWrapper.style.borderRadius = '4px';
+timerWrapper.style.overflow = 'hidden';
+timerWrapper.style.margin = '20px 0';
+
+var timerBar = document.createElement('div');
+timerBar.style.height = '100%';
+timerBar.style.width = '100%'; // Comienza llena
+timerBar.style.backgroundColor = '#4caf50'; // Verde
+timerBar.style.transition = 'width 1s linear';
+
+timerWrapper.appendChild(timerBar);
+game.insertBefore(timerWrapper, grid);
+
+// Iniciar temporizador
+var totalTime = 120;
+var timeLeft = totalTime;
+
+var timerInterval = setInterval(function () {
+  timeLeft--;
+
+  var percent = (timeLeft / totalTime) * 100;
+  timerBar.style.width = percent + '%';
+
+  // Cambiar color visualmente según urgencia
+  if (timeLeft <= 10) {
+    timerBar.style.backgroundColor = 'red';
+  } else if (timeLeft <= 30) {
+    timerBar.style.backgroundColor = 'orange';
+  }
+
+  if (timeLeft <= 0) {
+    clearInterval(timerInterval);
+    timerBar.style.width = '0%';
+    grid.style.pointerEvents = 'none';
+    alert('¡Se acabó el tiempo!');
+  }
+}, 1000);
