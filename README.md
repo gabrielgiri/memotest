@@ -10,20 +10,20 @@ Fun and simple memory game, like the one from Super Mario 3, made with plain Jav
 
 Just want to view the source of all the steps from start to finish? [View steps](https://gist.github.com/taniarascia/a3b550d568f3e6b693e89786eb333988).
 
-- Display 12 cards.
-- Duplicate the cards to have 2 sets of 12.
-- Randomize the display of cards.
-- Add selected style for selected cards.
-- Only allow two cards to be selected at a time.
-- Determine if two selected cards are a match and hide them.
-- Reset guess count after 2.
-- Add delay to selections.
-- Show back of card initially and flip on select
-- Finished game!
+- Mostrar 12 cartas.
+- Duplicar las cartas para tener 2 conjuntos de 12.
+- Aleatorizar la visualización de las cartas.
+- Agregar estilo de selección para las cartas seleccionadas.
+- Permitir seleccionar solo dos cartas a la vez.
+- Determinar si las dos cartas seleccionadas son un par y ocultarlas.
+- Reiniciar el contador de intentos después de 2 selecciones.
+- Agregar un retraso a las selecciones.
+- Mostrar el reverso de la carta inicialmente y voltearla al seleccionarla.
+- ¡Juego terminado!
 
 ## Author
 
-- [Tania Rascia](https://www.taniarascia.com)
+- [Gabriel Giri](https://www.gabrielgiri.com.ar)
 
 ## License
 
