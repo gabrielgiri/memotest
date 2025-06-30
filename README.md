@@ -36,7 +36,6 @@ Un juego de memoria visual divertido y colorido, inspirado en los clásicos jueg
 
 ## 📸 Captura
 
-![Vista del juego]
 ![image](https://github.com/user-attachments/assets/75dbc744-8393-4467-ab61-e8a7689b58f0)
 
 
