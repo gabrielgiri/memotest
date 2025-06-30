@@ -1,45 +1,56 @@
-# 🧠 Memotest Infantil
+# ⭐ Memory Game Infantil
 
-Un juego de memoria divertido y colorido hecho con HTML, CSS y JavaScript. Ideal para niños y niñas que quieren ejercitar su memoria visual emparejando tarjetas animadas.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-![Captura del juego](preview.png)
+Un juego de memoria visual divertido y colorido, inspirado en los clásicos juegos infantiles, hecho con HTML, CSS y JavaScript puro.
 
----
-
-## 🎮 Jugar ahora
-
-👉 [Probar el juego online](https://gabrielgiri.github.io/memotest/)  
-*(Funciona en computadora, tablet y celulares en pantalla completa)*
+🎮 [Jugar ahora](https://gabrielgiri.github.io/memotest)  
+📖 [Ver el código](https://github.com/gabrielgiri/memotest)
 
 ---
 
-## ✨ Características
+## 📋 Instrucciones
 
-- 🌈 Fondo animado con gradiente y textura
-- 🎴 Cartas con animación de giro (flip)
-- ⏱️ Temporizador visual con barra de progreso
-- 📊 Sistema de puntaje basado en el tiempo
-- 🟢 Pantalla de inicio con botón “Jugar”
-- 🎉 Mensaje final al ganar o perder
-- 🔊 Sonidos para match, victoria y derrota
-- 📱 Adaptado a pantallas móviles
+- Mostrar 12 cartas únicas.
+- Duplicarlas para formar 24 cartas.
+- Aleatorizar la posición en cada partida.
+- Agregar animaciones suaves de giro.
+- Permitir seleccionar dos cartas a la vez.
+- Detectar si hay coincidencia y dejar las cartas visibles.
+- Volver a ocultar si no coinciden.
+- Agregar pantalla de inicio con botón “Jugar”.
+- Iniciar temporizador al comenzar.
+- Calcular puntaje basado en el tiempo restante.
+- Mostrar mensaje de victoria o derrota.
+- Funciona en dispositivos móviles.
 
 ---
 
-## 🛠️ Tecnologías usadas
+## 🖥️ Tecnologías usadas
 
 - HTML5
-- CSS3 + Animaciones
-- JavaScript Vanilla (sin frameworks)
-- GitHub Pages (para publicación)
+- CSS3 (con animaciones, gradientes y texturas)
+- JavaScript (sin frameworks)
+- GitHub Pages para despliegue
 
 ---
 
-## 📦 Instalación local
+## 📸 Captura
 
-Si querés clonar el proyecto y correrlo en tu máquina:
+![Vista del juego](preview.png)
 
-```bash
-git clone https://github.com/gabrielgiri/memotest.git
-cd memotest
+> Fondo animado, cartas con efecto flip, puntaje en tiempo real y experiencia fullscreen.
+
+---
+
+## 👤 Autor
+
+- [Gabriel Giri](https://www.gabrielgiri.com.ar)
+- GitHub: [@gabrielgiri](https://github.com/gabrielgiri)
+
+---
+
+## 📄 Licencia
+
+Este proyecto es open source bajo la licencia [MIT](LICENSE).
 
