@@ -1,6 +1,5 @@
 # ⭐ Memory Game Infantil
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 Un juego de memoria visual divertido y colorido, inspirado en los clásicos juegos infantiles, hecho con HTML, CSS y JavaScript puro.
 
@@ -50,7 +49,5 @@ Un juego de memoria visual divertido y colorido, inspirado en los clásicos jueg
 
 ---
 
-## 📄 Licencia
 
-Este proyecto es open source bajo la licencia [MIT](LICENSE).
 
