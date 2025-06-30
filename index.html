@@ -7,17 +7,31 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
   <title>Memory Game</title>
-
+  <!-- Tipografías: Chewy (títulos) + Fredoka (texto general) -->
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.prefix.css">
   <link rel="icon" type="image/png" href="img/mushroom.png">
+
 
 </head>
 
 <body>
 
-  <div id="game"></div>
+
+<div id="start-screen">
+  <h1>🧠 Juego de Memoria</h1>
+  <p>Encontrá todos los pares antes que se acabe el tiempo</p>
+  <button id="start-button">🎮 Jugar</button>
+</div>
+
+
+<div id="game" style="display: none;"></div>
+
+<script src="js/cards.js"></script>
+<script src="js/gameover.js"></script>
 
   <script src="js/script.babel.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

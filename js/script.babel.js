@@ -1,42 +1,6 @@
 'use strict';
 
-var cardsArray = [{
-  'name': 'shell',
-  'img': 'img/blueshell.png'
-}, {
-  'name': 'star',
-  'img': 'img/star.png'
-}, {
-  'name': 'bobomb',
-  'img': 'img/bobomb.png'
-}, {
-  'name': 'nina',
-  'img': 'img/nina.png'
-}, {
-  'name': 'luigi',
-  'img': 'img/luigi.png'
-}, {
-  'name': 'peach',
-  'img': 'img/peach.png'
-}, {
-  'name': '1up',
-  'img': 'img/1up.png'
-}, {
-  'name': 'mushroom',
-  'img': 'img/mushroom.png'
-}, {
-  'name': 'thwomp',
-  'img': 'img/thwomp.png'
-}, {
-  'name': 'bulletbill',
-  'img': 'img/bulletbill.png'
-}, {
-  'name': 'coin',
-  'img': 'img/coin.png'
-}, {
-  'name': 'goomba',
-  'img': 'img/goomba.png'
-}];
+var score = 0;
 
 var gameGrid = cardsArray.concat(cardsArray).sort(function () {
   return 0.5 - Math.random();
@@ -79,7 +43,17 @@ var match = function match() {
   selected.forEach(function (card) {
     card.classList.add('match');
   });
+  var puntosGanados = Math.ceil(timeLeft * 0.5);
+  score += puntosGanados;
+  scoreLabel.textContent = 'Score: ' + score;
+
+  if (document.querySelectorAll('.match').length === gameGrid.length) {
+  clearInterval(timerInterval);
+  grid.style.pointerEvents = 'none';
+  showWinMessage();
+}
 };
+
 
 var resetGuesses = function resetGuesses() {
   firstGuess = '';
@@ -127,11 +101,15 @@ grid.addEventListener('click', function (event) {
 // Crear la barra de progreso
 var timerWrapper = document.createElement('div');
 timerWrapper.style.width = '100%';
-timerWrapper.style.height = '25px';
+timerWrapper.style.height = '20px';
 timerWrapper.style.backgroundColor = '#ccc';
 timerWrapper.style.borderRadius = '4px';
 timerWrapper.style.overflow = 'hidden';
 timerWrapper.style.margin = '20px 0';
+timerWrapper.style.maxWidth = '630px';
+timerWrapper.style.margin = '20px auto';
+timerWrapper.style.border = '2px solid white';
+timerWrapper.style.position = 'relative';
 
 var timerBar = document.createElement('div');
 timerBar.style.height = '100%';
@@ -139,11 +117,27 @@ timerBar.style.width = '100%'; // Comienza llena
 timerBar.style.backgroundColor = '#4caf50'; // Verde
 timerBar.style.transition = 'width 1s linear';
 
+
+// Crear el marcador de score
+var scoreLabel = document.createElement('span');
+scoreLabel.textContent = 'Score: 0';
+scoreLabel.style.position = 'absolute';
+scoreLabel.style.left = '50%';
+scoreLabel.style.top = '50%';
+scoreLabel.style.transform = 'translate(-50%, -50%)';
+scoreLabel.style.color = '#fff';
+scoreLabel.style.fontWeight = 'bold';
+scoreLabel.style.fontFamily = 'sans-serif';
+scoreLabel.style.pointerEvents = 'none';
+scoreLabel.style.zIndex = '2'; // encima del timerBar
+
+// Agregar al DOM
 timerWrapper.appendChild(timerBar);
+timerWrapper.appendChild(scoreLabel);
 game.insertBefore(timerWrapper, grid);
 
 // Iniciar temporizador
-var totalTime = 120;
+var totalTime = 100;
 var timeLeft = totalTime;
 
 var timerInterval = setInterval(function () {
@@ -163,6 +157,6 @@ var timerInterval = setInterval(function () {
     clearInterval(timerInterval);
     timerBar.style.width = '0%';
     grid.style.pointerEvents = 'none';
-    alert('¡Se acabó el tiempo!');
+    showGameOverMessage();
   }
 }, 1000);
